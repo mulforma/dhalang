@@ -24,11 +24,11 @@ console.log(execute("pandha pandha pandha pandadhada"));
 ```
 
 # Docs
-### Print current cell value
-Using `pandadhada` instructions will print the ASCII representation of the string.
+### Output current cell value
+Using `pandadhada` instructions will return the ASCII representation of the string.
 ```javascript
 panda panda // Move to cell 2
-pandha pandadhada // Increment current cell (Which is cell 2) by 1 and print the current cell value (ASCII string value)
+pandha pandadhada // Increment current cell (Which is cell 2) by 1 and return the current cell value (ASCII string value)
 ```
 ### Move to next cell
 Using `panda` instructions will move the pointer to the next cell.
@@ -58,5 +58,5 @@ dapandha 172 // Start loop 172 times
 panda panda panda // Move this local pointer to cell 3
 pandha // Increment current cell value by 1
 dhapanda // Close loop
-pandadhada // Print current cell value
+pandadhada // Return current cell value
 ```
