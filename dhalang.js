@@ -35,7 +35,6 @@ function run(code) {
         for (let k = 0; k < cl.length; k++) {
           cells[k] += cl[k];
         }
-        ptr += pt;
         if (ptr >= cells.length) {
           cells.push(0);
         }
@@ -46,7 +45,7 @@ function run(code) {
 }
 
 function execute(code) {
-  let [cells, ptr, output, instructions] = run(code);
+  let [,, output] = run(code);
   return output;
 }
 
