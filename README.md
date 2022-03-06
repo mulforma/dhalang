@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="/logo.svg" width="100px">
+  <img src="/logo.svg" width="150px">
   <h1 align="center">
     DhaLang
   </h1>
