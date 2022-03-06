@@ -24,7 +24,7 @@ console.log(execute("pandha pandha pandha pandadhada"));
 ```
 
 # Docs
-### Output current cell value
+### Returning current cell value
 Using `pandadhada` instructions will return the ASCII representation of the string.
 ```javascript
 panda panda // Move to cell 2
