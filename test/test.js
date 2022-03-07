@@ -3,7 +3,7 @@ const assert = require('assert');
 
 describe("pandadhada", () => {
   it("should return the cells value", () => {
-    let [cl, pt, ot] = run("dapandha 105 pandha pandha dhapanda pandadhada");
+    let [cl,, ot] = run("dapandha 105 pandha pandha dhapanda pandadhada");
     console.log(cl)
     assert.equal(ot, `Ò`);
   });
@@ -25,14 +25,14 @@ describe("dhapan", () => {
 
 describe("panda", () => {
   it("should move pointer to next cell", () => {
-    let [cl, pt] = run("panda panda panda");
+    let [, pt] = run("panda panda panda");
     assert.equal(pt, 3);
   })
 })
 
 describe("dapan", () => {
   it("should move pointer to previous cell", () => {
-    let [cl, pt] = run("dapan dapan dapan pandadhada");
+    let [, pt] = run("dapan dapan dapan pandadhada");
     assert.equal(pt, -3);
   })
 })
