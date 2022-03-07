@@ -42,9 +42,4 @@ let run = (code) => {
   return [cells, ptr, output];
 }
 
-let execute = (code) => {
-  let [, , output] = run(code);
-  return output;
-}
-
-module.exports = execute;
+module.exports = run

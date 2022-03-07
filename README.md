@@ -23,9 +23,10 @@ $ curl --request GET -sL \
 Importing the file
 
 ```javascript
-import execute from "./lib/dhalang.min.js";
+import run from "./lib/dhalang.min.js";
+let [cells, ptr, output] = run("pandha pandha pandha pandadhada");
 
-console.log(execute("pandha pandha pandha pandadhada"));
+console.log(output);
 ```
 
 # Docs
@@ -90,14 +91,9 @@ To start loop, use `dapandha` instruction follow with amount of times to loop an
 instruction.
 
 ```javascript
-panda
-panda
-panda // Move to cell 3
-dapandha
-172 // Start loop 172 times
-panda
-panda
-panda // Move this local pointer to cell 3
+panda panda panda // Move to cell 3
+dapandha 172 // Start loop 172 times
+panda panda panda // Move this local pointer to cell 3
 pandha // Increment current cell value by 1
 dhapanda // Close loop
 pandadhada // Return current cell value
