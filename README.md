@@ -36,10 +36,9 @@ console.log(output);
 Using `pandadhada` instructions will return the ASCII representation of the string.
 
 ```javascript
-panda
-panda // Move to cell 2
-pandha
-pandadhada // Increment current cell (Which is cell 2) by 1 and return the current cell value (ASCII string value)
+panda panda // Move to cell 2
+pandha // Increment current cell (Which is cell 2) by 1
+pandadha // Return the value of cell 2 (ASCII)
 ```
 
 ### Move to next cell
@@ -47,10 +46,7 @@ pandadhada // Increment current cell (Which is cell 2) by 1 and return the curre
 Using `panda` instructions will move the pointer to the next cell.
 
 ```javascript
-panda
-panda
-panda
-panda // Move to cell 4
+panda panda panda panda // Move to cell 4
 ```
 
 ### Move to previous cell
@@ -58,9 +54,8 @@ panda // Move to cell 4
 Using `dapan` instructions will move the pointer to the previous cell.
 
 ```javascript
-panda
-panda
-dapan // Move to cell 1
+panda panda // Move to cell 2
+dapan // Back to cell 1
 ```
 
 ### Increment current cell value
@@ -68,11 +63,8 @@ dapan // Move to cell 1
 Using `pandha` instructions will increment the value of the current cell by 1.
 
 ```javascript
-panda
-panda
-panda
-pandha
-pandha // Move to cell 3 and increment the value by 2
+panda panda panda // Move to cell 3
+pandha // Increment current cell by 1
 ```
 
 ### Decrement current cell value
@@ -80,9 +72,8 @@ pandha // Move to cell 3 and increment the value by 2
 Using `dhapan` instructions will decrement the value of the current cell by 1.
 
 ```javascript
-panda
-panda
-dhapan // Move to cell 3 and decrement the value by 1
+panda panda panda // Move to cell 3
+dhapan // Decrement the value by 1
 ```
 
 ### Loop
