@@ -1,5 +1,5 @@
 let run = (code) => {
-  let cells = [];
+  let cells = [0];
   let ptr = 0;
   let output = "";
   let instructions = code.split(" ");
@@ -31,10 +31,10 @@ let run = (code) => {
       case "dapandha":
         let instruction = instructions.slice(i + 2, instructions.slice(i + 2)
           .indexOf("dhapanda") + i + 2);
-        for (let j = 0; j < instructions[i + 1]; j ++) {
+        for (let j = 0; j < instructions[i + 1] - 1; j ++) {
           let [cl, , ot] = run(instruction.join(" "));
           output += ot;
-          cl.map((c, i) => cells[i] = c);
+          cl.map((c, i) => cells[i] += c);
           addCells();
         }
     }
