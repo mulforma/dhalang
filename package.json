@@ -1,8 +1,9 @@
 {
 	"dependencies": {
-		"mocha": "^9.2.1"
+		"mocha": "^9.2.1",
+		"prompt-sync": "^4.2.0"
 	},
-  "scripts": {
-    "test": "mocha"
-  }
+	"scripts": {
+		"test": "mocha"
+	}
 }
