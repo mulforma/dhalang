@@ -1,55 +1,50 @@
-const printKw = "pandadhada";
-const incPtr = "panda";
-const decPtr = "dapan";
-const incCell = "pandha";
-const decCell = "dhapan";
-const loopStart = "dapandha";
-const loopEnd = "dhapanda";
-
-function run(code) {
-  let cells = [0];
+let run = (code) => {
+  let cells = [];
   let ptr = 0;
   let output = "";
   let instructions = code.split(" ");
-
-  for (let i = 0; i < instructions.length; i++) {
-    let c = instructions[i];
-    if (c === printKw) {
-      output += String.fromCharCode(cells[ptr]);
-    } else if (c === incPtr) {
-      ptr += 1;
-      if (ptr >= cells.length) {
-        cells.push(0);
-      }
-    } else if (c === decPtr) {
-      ptr--;
-    } else if (c === incCell) {
-      cells[ptr]++;
-    } else if (c === decCell) {
-      cells[ptr]--;
-    } else if (c === loopStart) {
-      let instruction = instructions.slice(i + 2, instructions.slice(i + 2).indexOf(loopEnd) + i + 2);
-      for (let j = 0; j < instructions[i + 1]; j++) {
-        let [cl, pt, ot] = run(instruction.join(" "));
-        output += ot;
-        for (let k = 0; k < cl.length; k++) {
-          cells[k] += cl[k];
-        }
-        if (ptr >= cells.length) {
-          cells.push(0);
-        }
-      }
+  
+  let addCells = (i) => {
+    i ? ptr ++ : '';
+    if (ptr >= cells.length) {
+      cells.push(0);
     }
   }
-  return [cells, ptr, output, instructions];
+  
+  instructions.map((c, i) => {
+    switch (c) {
+      case "pandadhada":
+        output += String.fromCharCode(cells[ptr]);
+        break;
+      case "panda":
+        addCells(1);
+        break;
+      case "dapan":
+        ptr --;
+        break;
+      case "pandha":
+        cells[ptr] ++;
+        break;
+      case "dhapan":
+        cells[ptr] --;
+        break;
+      case "dapandha":
+        let instruction = instructions.slice(i + 2, instructions.slice(i + 2)
+          .indexOf("dhapanda") + i + 2);
+        for (let j = 0; j < instructions[i + 1]; j ++) {
+          let [cl, , ot] = run(instruction.join(" "));
+          output += ot;
+          cl.map((c, i) => cells[i] = c);
+          addCells();
+        }
+    }
+  })
+  return [cells, ptr, output];
 }
 
-function execute(code) {
-  let [,, output] = run(code);
+let execute = (code) => {
+  let [, , output] = run(code);
   return output;
 }
 
-module.exports = {
-  execute,
-  run
-};
+module.exports = execute;
