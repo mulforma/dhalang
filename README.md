@@ -16,7 +16,7 @@ Downloading the file
 
 ```bash
 $ curl --request GET -sL \
-     --url 'https://raw.githubusercontent.com/tinvv/dhalang/main/dhalang.min.js?token=GHSAT0AAAAAABRTFWATUAGTLX5RAWRDABTUYROFQLQ'\
+     --url 'https://s3.tin-sci.me/dhalang.min.js'\
      --output './lib'
 ```
 
